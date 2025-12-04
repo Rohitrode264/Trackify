@@ -196,7 +196,7 @@ export default function OrderFormPopup({
           className="flex-1 overflow-y-auto px-6 py-6 space-y-6"
         >
           {/* CUSTOMER */}
-          <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-100 rounded-xl p-5">
+          <div className="bg-linear-to-br from-blue-50 to-white border border-blue-100 rounded-xl p-5">
             <label className="block text-sm font-semibold text-gray-900 mb-2">
               Customer
             </label>
@@ -369,7 +369,7 @@ export default function OrderFormPopup({
           </div>
 
           {/* SHIPPING CHARGE & TOTALS */}
-          <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-5 space-y-4">
+          <div className="bg-linear-to-br from-gray-50 to-white border border-gray-200 rounded-xl p-5 space-y-4">
             <div>
               <Input
                 label="Shipping Charge (₹)"

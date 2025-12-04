@@ -147,7 +147,7 @@ const CreateUserModal: React.FC<CreateUserModalProps> = ({ isOpen, onClose, onSu
     <div className="fixed inset-0 bg-black/30 bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-linear-to-r from-blue-50 to-white">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-blue-100 rounded-xl">
               <UserPlus className="w-5 h-5 text-blue-600" />
@@ -386,13 +386,13 @@ export const Governance: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-50 flex flex-col">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 via-blue-50/30 to-gray-50 flex flex-col">
       {/* Header */}
       <div className="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-20">
         <div className="px-8 py-6">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-2.5 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg">
+              <div className="p-2.5 bg-linear-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg">
                 <UserCog className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -426,7 +426,7 @@ export const Governance: React.FC = () => {
       <div className="flex-1 px-8 py-6">
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
           {/* Stats Bar */}
-          <div className="px-6 py-4 bg-gradient-to-r from-blue-50 to-white border-b border-gray-200">
+          <div className="px-6 py-4 bg-linear-to-r from-blue-50 to-white border-b border-gray-200">
             <div className="flex items-center justify-between text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
@@ -468,7 +468,7 @@ export const Governance: React.FC = () => {
                   >
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-lg">
+                        <div className="w-12 h-12 rounded-xl bg-linear-to-br from-blue-500 to-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-lg">
                           {user.name.charAt(0).toUpperCase()}
                         </div>
                         <div>

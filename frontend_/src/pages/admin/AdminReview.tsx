@@ -5,16 +5,14 @@ import {
 } from "../../hooks/useFetchOrders";
 import Button from "../../components/Button";
 import AdminReviewPopup from "../../components/PopUps/AdminReviewPopup";
-import { Order, StatusBadge } from "./Order"; // SAME BADGE
+import { StatusBadge } from "./Order"; // SAME BADGE
 
 import {
   ClipboardClock,
   ListOrdered,
   Package,
   User,
-  Phone,
   IndianRupee,
-  ShoppingBag,
   Eye,
   AlertCircle,  
   CheckCircle2,
@@ -54,13 +52,13 @@ export const AdminReview: React.FC = () => {
   return (
     <div className="h-screen flex flex-col overflow-hidden">
       {/* HEADER — MATCHED EXACTLY TO ORDERS PAGE */}
-      <div className="bg-white/80 backdrop-blur-sm border-b border-gray-200 flex-shrink-0">
+      <div className="bg-white/80 backdrop-blur-sm border-b border-gray-200 shrink-0">
         <div className="px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
 
             {/* LEFT HEADER */}
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg shadow-blue-200">
+              <div className="p-2 bg-linear-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg shadow-blue-200">
                 <UserPen className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -109,7 +107,7 @@ export const AdminReview: React.FC = () => {
 
         {/* STATS BAR */}
         {pagination && (
-          <div className="bg-gradient-to-r from-blue-50 to-white rounded-xl shadow-sm border border-gray-200 px-6 py-3 flex-shrink-0">
+          <div className="bg-linear-to-r from-blue-50 to-white rounded-xl shadow-sm border border-gray-200 px-6 py-3 shrink-0">
             <div className="flex items-center justify-between text-sm">
 
               <div className="flex items-center gap-2">
@@ -156,7 +154,7 @@ export const AdminReview: React.FC = () => {
             {/* EMPTY */}
             {!loading && !error && orders.length === 0 && (
               <div className="flex flex-col items-center justify-center h-full">
-                <div className="p-4 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl mb-4">
+                <div className="p-4 bg-linear-to-br from-gray-100 to-gray-200 rounded-2xl mb-4">
                   {activeView === "review" ? (
                     <CheckCircle2 className="h-12 w-12 text-gray-400" />
                   ) : (
@@ -181,7 +179,7 @@ export const AdminReview: React.FC = () => {
               <>
                 <div className="hidden lg:block">
                   <table className="w-full">
-                    <thead className="bg-gradient-to-r from-gray-50 to-blue-50/50 sticky top-0 z-10">
+                    <thead className="bg-linear-to-r from-gray-50 to-blue-50/50 sticky top-0 z-10">
                       <tr>
                         {[
                           "Order ID",
@@ -336,7 +334,7 @@ export const AdminReview: React.FC = () => {
 
         {/* PAGINATION — EXACT MATCH */}
         {pagination && !loading && orders.length > 0 && (
-          <div className="border-t border-gray-200 bg-gradient-to-r from-white to-blue-50/50 rounded-xl shadow-sm px-6 py-3 flex-shrink-0">
+          <div className="border-t border-gray-200 bg-linear-to-r from-white to-blue-50/50 rounded-xl shadow-sm px-6 py-3 shrink-0">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
 
               <div className="flex items-center gap-3">

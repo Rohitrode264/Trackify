@@ -1,4 +1,3 @@
-import React from 'react';
 import { Modal, ModalHeader } from './Modal';
 import type { Order } from '../../hooks/useFetchOrders';
 

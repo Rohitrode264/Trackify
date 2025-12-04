@@ -61,11 +61,11 @@ export const Customer: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
       {/* Header Bar */}
-      <div className="bg-white backdrop-blur-sm border-b border-gray-200 flex-shrink-0">
+      <div className="bg-white backdrop-blur-sm border-b border-gray-200 shrink-0">
         <div className="px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg shadow-blue-200">
+              <div className="p-2 bg-linear-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg shadow-blue-200">
                 <Users className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -109,7 +109,7 @@ export const Customer: React.FC = () => {
       <div className="flex-1 overflow-hidden flex flex-col px-4 sm:px-6 lg:px-8 py-4 gap-4">
         {/* Stats Bar */}
         {pagination && (
-          <div className="bg-gradient-to-r from-blue-50 to-white rounded-xl shadow-sm border border-gray-200 px-6 py-3 flex-shrink-0">
+          <div className="bg-linear-to-r from-blue-50 to-white rounded-xl shadow-sm border border-gray-200 px-6 py-3 shrink-0">
             <div className="flex items-center justify-between text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
@@ -147,7 +147,7 @@ export const Customer: React.FC = () => {
               </div>
             ) : customers.length === 0 ? (
               <div className="flex flex-col items-center justify-center h-full">
-                <div className="p-4 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl mb-4">
+                <div className="p-4 bg-linear-to-br from-gray-100 to-gray-200 rounded-2xl mb-4">
                   <Users className="h-12 w-12 text-gray-400" />
                 </div>
                 <span className="text-gray-600 font-semibold text-lg">No customers found</span>
@@ -158,7 +158,7 @@ export const Customer: React.FC = () => {
                 {/* Desktop Table View */}
                 <div className="hidden lg:block h-full">
                   <table className="w-full">
-                    <thead className="bg-gradient-to-r from-gray-50 to-blue-50/50 sticky top-0 z-10">
+                    <thead className="bg-linear-to-r from-gray-50 to-blue-50/50 sticky top-0 z-10">
                       <tr>
                         <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 border-b-2 border-gray-200">
                           Customer
@@ -186,7 +186,7 @@ export const Customer: React.FC = () => {
                         >
                           <td className="px-6 py-4">
                             <div className="flex items-center gap-3">
-                              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-md flex-shrink-0">
+                              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-linear-to-br from-blue-500 to-blue-600 text-white shadow-md shrink-0">
                                 <User className="w-5 h-5" />
                               </div>
                               <div className="min-w-0">
@@ -219,7 +219,7 @@ export const Customer: React.FC = () => {
                           <td className="px-6 py-4">
                             <div className="flex items-center gap-2">
                               <FileText className="w-4 h-4 text-gray-400" />
-                              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-gray-100 to-gray-200 text-gray-700">
+                              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-linear-to-r from-gray-100 to-gray-200 text-gray-700">
                                 {cust.gst || 'N/A'}
                               </span>
                             </div>
@@ -270,11 +270,11 @@ export const Customer: React.FC = () => {
                       className="group bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg hover:border-blue-300 transition-all duration-200 cursor-pointer relative overflow-hidden"
                       onClick={(e) => handleRowClick(e, cust._id)}
                     >
-                      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-blue-400 via-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex items-center gap-3 flex-1 min-w-0">
-                          <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-md">
+                          <div className="shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-linear-to-br from-blue-500 to-blue-600 text-white shadow-md">
                             <User className="w-5 h-5" />
                           </div>
                           <div className="flex-1 min-w-0">
@@ -282,7 +282,7 @@ export const Customer: React.FC = () => {
                               <span className="font-semibold text-gray-900 truncate">
                                 {cust.name || '-'}
                               </span>
-                              <ExternalLink className="w-3 h-3 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                              <ExternalLink className="w-3 h-3 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
                             </div>
                             {cust.uniqueId && (
                               <span className="text-xs text-gray-500 font-medium bg-gray-100 px-1.5 py-0.5 rounded inline-block mt-0.5">
@@ -292,7 +292,7 @@ export const Customer: React.FC = () => {
                           </div>
                         </div>
 
-                        <div className="flex items-center gap-1 flex-shrink-0 ml-2">
+                        <div className="flex items-center gap-1 shrink-0 ml-2">
                           <button
                             className="p-1.5 rounded-lg border border-gray-300 text-gray-600 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-400 transition-all"
                             onClick={(e) => handleViewClick(e, cust)}
@@ -312,11 +312,11 @@ export const Customer: React.FC = () => {
 
                       <div className="space-y-2 mb-3">
                         <div className="flex items-center gap-2 text-gray-600">
-                          <Phone className="w-3.5 h-3.5 text-blue-500 flex-shrink-0" />
+                          <Phone className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                           <span className="text-sm truncate">{cust.phones?.[0] || '-'}</span>
                         </div>
                         <div className="flex items-center gap-2 text-gray-600">
-                          <Mail className="w-3.5 h-3.5 text-blue-500 flex-shrink-0" />
+                          <Mail className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                           <span className="text-sm truncate">{cust.email || '-'}</span>
                         </div>
                       </div>
@@ -351,7 +351,7 @@ export const Customer: React.FC = () => {
 
         {/* Pagination Footer */}
         {pagination && !loading && customers.length > 0 && (
-          <div className="border-t border-gray-200 bg-gradient-to-r from-white to-blue-50/50 rounded-xl shadow-sm px-6 py-3 flex-shrink-0">
+          <div className="border-t border-gray-200 bg-linear-to-r from-white to-blue-50/50 rounded-xl shadow-sm px-6 py-3 shrink-0">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div className="flex items-center gap-3">
                 <label className="text-sm text-gray-600 font-medium">Rows per page:</label>

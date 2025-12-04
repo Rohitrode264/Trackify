@@ -9,7 +9,6 @@ import {
   RefreshCw,
   ArrowLeft,
   Calendar,
-  DollarSign,
   ShoppingBag,
   Truck,
   CreditCard,
@@ -17,7 +16,7 @@ import {
   IndianRupee
 } from "lucide-react";
 import Button from "../components/Button";
-import { useOrders, type Order as FetchedOrder } from '../hooks/useFetchOrders';
+import { type Order as FetchedOrder } from '../hooks/useFetchOrders';
 import { useCustomerDetails } from "../hooks/useFetchCustomerDetails";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -100,7 +99,7 @@ export const CustomerDetails: React.FC = () => {
             {/* Customer Info Card */}
             <section className="bg-white shadow-sm rounded-lg border border-gray-200 overflow-hidden">
               {/* Header with Avatar */}
-              <div className="bg-gradient-to-r from-blue-50 to-white px-6 py-6 border-b border-gray-200">
+              <div className="bg-linear-to-r from-blue-50 to-white px-6 py-6 border-b border-gray-200">
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-4">
                     <div className="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center text-2xl font-bold">

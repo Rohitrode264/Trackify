@@ -1,7 +1,5 @@
 import React, { useMemo, useState } from 'react';
 import {
-    LineChart,
-    Line,
     BarChart,
     Bar,
     XAxis,
@@ -10,9 +8,6 @@ import {
     Tooltip,
     Legend,
     ResponsiveContainer,
-    PieChart,
-    Pie,
-    Cell,
     AreaChart,
     Area,
 } from 'recharts';
@@ -23,7 +18,6 @@ import {
     CreditCard,
     Receipt,
     FileText,
-    Calendar,
     Download,
     Filter,
     ArrowUpRight,
@@ -70,7 +64,6 @@ export const Finance: React.FC = () => {
     const [periodValue, setPeriodValue] = useState<number>(30);
 
     const today = useMemo(() => new Date(), []);
-    const startOfMonth = useMemo(() => new Date(today.getFullYear(), today.getMonth(), 1), [today]);
     const startOfYear = useMemo(() => new Date(today.getFullYear(), 0, 1), [today]);
 
     // Filter orders based on time range and status
@@ -503,7 +496,7 @@ export const Finance: React.FC = () => {
                                             <p className="text-xs font-semibold uppercase text-gray-400 truncate">
                                                 {label}
                                             </p>
-                                            <p className="mt-2 text-xl sm:text-2xl font-semibold text-gray-900 break-words">
+                                            <p className="mt-2 text-xl sm:text-2xl font-semibold text-gray-900 wrap-break-words">
                                                 {value}
                                             </p>
                                             {change !== undefined && (
@@ -523,7 +516,7 @@ export const Finance: React.FC = () => {
                                                 </div>
                                             )}
                                         </div>
-                                        <div className="p-2 rounded-xl bg-blue-50 text-blue-600 flex-shrink-0 ml-2">
+                                        <div className="p-2 rounded-xl bg-blue-50 text-blue-600 shrink-0 ml-2">
                                             <Icon className="w-5 h-5" />
                                         </div>
                                     </div>
@@ -704,7 +697,7 @@ export const Finance: React.FC = () => {
                                 <div className="overflow-x-auto">
                                     <table className="w-full">
                                         <thead>
-                                            <tr className="bg-gradient-to-r from-gray-50 to-blue-50/50 border-b-2 border-gray-200">
+                                            <tr className="bg-linear-to-r from-gray-50 to-blue-50/50 border-b-2 border-gray-200">
                                                 <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">
                                                     Metric
                                                 </th>
@@ -847,7 +840,7 @@ export const Finance: React.FC = () => {
                     <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-50 p-4">
                         <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
                             {/* Header */}
-                            <div className="flex justify-between items-center px-6 py-4 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white">
+                            <div className="flex justify-between items-center px-6 py-4 border-b border-gray-200 bg-linear-to-r from-blue-50 to-white">
                                 <div className="flex items-center gap-3">
                                     <div className="p-2 bg-blue-600 rounded-lg">
                                         <FileDown className="w-5 h-5 text-white" />

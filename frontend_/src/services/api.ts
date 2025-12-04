@@ -234,7 +234,6 @@ class ApiService {
         formulationVisible: boolean,
         showFormulationToPackaging?: boolean
     ): Promise<{ data: Order; message?: string }> {
-        const token = authService.getToken();
         const body: any = { itemIndex, formulation, formulationVisible };
         if (showFormulationToPackaging !== undefined) {
             body.showFormulationToPackaging = showFormulationToPackaging;
@@ -281,7 +280,7 @@ class ApiService {
 
     async packOrder(orderId: string, images: File[]): Promise<{ data: Order }> {
         const formData = new FormData();
-        images.forEach((image, index) => {
+        images.forEach((image) => {
             formData.append('images', image);
         });
 

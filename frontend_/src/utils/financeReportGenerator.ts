@@ -153,7 +153,7 @@ export const generateFinanceReportPDF = (data: FinanceReportData, reportType: st
         let ordersShown = 0;
         const maxOrdersPerPage = 20;
 
-        data.orders.forEach((order, index) => {
+        data.orders.forEach((order) => {
             if (ordersShown >= maxOrdersPerPage) {
                 doc.addPage();
                 yPos = margin;

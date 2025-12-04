@@ -38,7 +38,7 @@ export const ViewCustomerPopup: React.FC<PopupProps> = ({ isOpen, onClose, custo
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} maxWidth="3xl">
-      <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white">
+      <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-linear-to-r from-blue-50 to-white">
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold text-lg">
             {customer.name?.charAt(0).toUpperCase()}

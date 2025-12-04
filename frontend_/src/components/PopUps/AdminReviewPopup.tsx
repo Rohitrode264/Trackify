@@ -335,7 +335,7 @@ const AdminReviewPopup: React.FC<AdminReviewPopupProps> = ({
     <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-50 animate-fadeIn p-4">
       <div className="bg-white w-full max-w-6xl max-h-[90vh] rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-slideUp">
         {/* Header */}
-        <div className="flex justify-between items-center px-6 py-4 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white">
+        <div className="flex justify-between items-center px-6 py-4 border-b border-gray-200 bg-linear-to-r from-blue-50 to-white">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-blue-600 rounded-lg">
               <ClipboardList className="w-5 h-5 text-white" />
@@ -384,7 +384,7 @@ const AdminReviewPopup: React.FC<AdminReviewPopupProps> = ({
           {activeTab === "order" && (
             <div className="space-y-6">
               {/* Customer Info Card */}
-              <div className="bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 border border-blue-100">
+              <div className="bg-linear-to-br from-blue-50 to-white rounded-xl p-5 border border-blue-100">
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
                     <User className="w-5 h-5 text-blue-600" />

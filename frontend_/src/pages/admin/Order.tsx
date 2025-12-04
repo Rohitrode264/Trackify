@@ -18,7 +18,6 @@ import {
   IndianRupee,
   Download
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 import { generateOrderBillPDF } from '../../utils/pdfGenerator';
 
 // Status badge component
@@ -145,7 +144,6 @@ export const Order: React.FC = () => {
   const [showOrderForm, setShowOrderForm] = useState(false);
   const [selectedOrder, setSelectedOrder] = useState<FetchedOrder | null>(null);
   const [showViewOrder, setShowViewOrder] = useState(false);
-  const navigate = useNavigate();
 
   const handlePageChange = (page: number) => {
     setFilters({ page });
@@ -166,11 +164,11 @@ export const Order: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col overflow-hidden">
       {/* Header Bar */}
-      <div className="bg-white/80 backdrop-blur-sm border-b border-gray-200 flex-shrink-0">
+      <div className="bg-white/80 backdrop-blur-sm border-b border-gray-200 shrink-0">
         <div className="px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg shadow-blue-200">
+              <div className="p-2 bg-linear-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg shadow-blue-200">
                 <ClipboardList className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -218,7 +216,7 @@ export const Order: React.FC = () => {
       <div className="flex-1 overflow-hidden flex flex-col px-4 sm:px-6 lg:px-8 py-4 gap-4">
         {/* Stats Bar */}
         {pagination && (
-          <div className="bg-gradient-to-r from-blue-50 to-white rounded-xl shadow-sm border border-gray-200 px-4 sm:px-6 py-3 flex-shrink-0">
+          <div className="bg-linear-to-r from-blue-50 to-white rounded-xl shadow-sm border border-gray-200 px-4 sm:px-6 py-3 shrink-0">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
@@ -256,7 +254,7 @@ export const Order: React.FC = () => {
               </div>
             ) : orders.length === 0 ? (
               <div className="flex flex-col items-center justify-center h-full">
-                <div className="p-4 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl mb-4">
+                <div className="p-4 bg-linear-to-br from-gray-100 to-gray-200 rounded-2xl mb-4">
                   <ShoppingCart className="h-12 w-12 text-gray-400" />
                 </div>
                 <span className="text-gray-600 font-semibold text-lg">No orders found</span>
@@ -267,7 +265,7 @@ export const Order: React.FC = () => {
                 {/* Desktop Table View */}
                 <div className="hidden lg:block h-full">
                   <table className="w-full">
-                    <thead className="bg-gradient-to-r from-gray-50 to-blue-50/50 sticky top-0 z-10">
+                    <thead className="bg-linear-to-r from-gray-50 to-blue-50/50 sticky top-0 z-10">
                       <tr>
                         <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 border-b-2 border-gray-200">Order ID</th>
                         <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 border-b-2 border-gray-200">Customer</th>
@@ -377,12 +375,12 @@ export const Order: React.FC = () => {
                       key={order._id}
                       className="group bg-white border border-gray-200 rounded-lg p-4 hover:shadow-lg hover:border-blue-300 transition-all duration-200 cursor-pointer relative overflow-hidden"
                     >
-                      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                      <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-blue-400 via-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
                       {/* Header */}
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex items-center gap-2 flex-1 min-w-0">
-                          <Package className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                          <Package className="w-4 h-4 text-blue-600 shrink-0" />
                           <span className="font-semibold text-gray-900 truncate">{order.orderId}</span>
                         </div>
                         <StatusBadge status={order.status} />
@@ -475,7 +473,7 @@ export const Order: React.FC = () => {
           <div className="border-t border-gray-200 from-white to-blue-50/50 rounded-xl shadow-sm px-6 py-3 ">
 
             <div className="flex flex-col sm:flex-row sm:itmes-center sm:justify-between gap-3 ">
-              <div className="gap-1 items-center gap-3 hidden md:block">
+              <div className="gap-1 items-center hidden md:block">
                 <label className="text-sm text-gray-600 font-medium">Rows per page:</label>
                 <select
                   value={pagination.limit}

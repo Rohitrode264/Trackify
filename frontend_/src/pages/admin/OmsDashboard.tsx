@@ -378,9 +378,9 @@ export const OmsDashboard: React.FC = () => {
                                     <div className="flex items-start justify-between">
                                         <div className="flex-1 min-w-0">
                                             <p className="text-xs font-semibold uppercase text-gray-400 truncate">{label}</p>
-                                            <p className="mt-2 text-xl sm:text-2xl font-semibold text-gray-900 break-words">{value}</p>
+                                            <p className="mt-2 text-xl sm:text-2xl font-semibold text-gray-900 wrap-break-words">{value}</p>
                                         </div>
-                                        <div className="p-2 rounded-xl bg-blue-50 text-blue-600 flex-shrink-0 ml-2">
+                                        <div className="p-2 rounded-xl bg-blue-50 text-blue-600 shrink-0 ml-2">
                                             <Icon className="w-5 h-5" />
                                         </div>
                                     </div>
@@ -644,11 +644,11 @@ export const OmsDashboard: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className="space-y-4">
-                                    <div className="p-4 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200">
+                                    <div className="p-4 rounded-xl bg-linear-to-br from-blue-50 to-blue-100 border border-blue-200">
                                         <p className="text-xs uppercase text-blue-600 font-semibold mb-1">Total Orders</p>
                                         <p className="text-2xl font-bold text-blue-900">{orders.length}</p>
                                     </div>
-                                    <div className="p-4 rounded-xl bg-gradient-to-br from-green-50 to-green-100 border border-green-200">
+                                    <div className="p-4 rounded-xl bg-linear-to-br from-green-50 to-green-100 border border-green-200">
                                         <p className="text-xs uppercase text-green-600 font-semibold mb-1">Total Revenue</p>
                                         <p className="text-2xl font-bold text-green-900">
                                             {formatCurrency(
@@ -656,7 +656,7 @@ export const OmsDashboard: React.FC = () => {
                                             )}
                                         </p>
                                     </div>
-                                    <div className="p-4 rounded-xl bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200">
+                                    <div className="p-4 rounded-xl bg-linear-to-br from-purple-50 to-purple-100 border border-purple-200">
                                         <p className="text-xs uppercase text-purple-600 font-semibold mb-1">Unique Customers</p>
                                         <p className="text-2xl font-bold text-purple-900">{customerOrderCounts.size}</p>
                                     </div>

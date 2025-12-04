@@ -113,11 +113,11 @@ export const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <div className="min-h-screen bg-linaer-to-br from-gray-50 via-white to-blue-50">
       <div className="px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6 sm:space-y-8">
         {/* Welcome Header */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 p-6 sm:p-8 md:p-10 shadow-xl">
-          <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
+        <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-blue-600 via-blue-700 to-indigo-800 p-6 sm:p-8 md:p-10 shadow-xl">
+          <div className="absolute inset-0 bg-grid-white/[0.05] bg-size-[20px_20px]" />
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl" />
 
@@ -149,10 +149,10 @@ export const Home = () => {
               const Icon = card.icon;
               return (
                 <Card key={index} padding="md" shadow="md" className="relative overflow-hidden">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-50`} />
+                  <div className={`absolute inset-0 bg-linear-to-br ${card.gradient} opacity-50`} />
                   <div className="relative z-10">
                     <div className="flex items-start justify-between mb-3">
-                      <div className={`p-2.5 rounded-xl bg-gradient-to-br ${card.gradient}`}>
+                      <div className={`p-2.5 rounded-xl bg-linear-to-br ${card.gradient}`}>
                         <Icon className="w-5 h-5 text-gray-700" />
                       </div>
                     </div>
@@ -185,9 +185,9 @@ export const Home = () => {
                   onClick={() => navigate(action.href)}
                   className="group relative overflow-hidden rounded-2xl bg-white border border-gray-200 p-6 sm:p-8 shadow-sm hover:shadow-lg transition-all duration-300 text-left"
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${action.color} opacity-0 group-hover:opacity-5 transition-opacity`} />
+                  <div className={`absolute inset-0 bg-linear-to-br ${action.color} opacity-0 group-hover:opacity-5 transition-opacity`} />
                   <div className="relative z-10">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${action.color} mb-4 w-fit group-hover:scale-110 transition-transform`}>
+                    <div className={`p-3 rounded-xl bg-linear-to-br ${action.color} mb-4 w-fit group-hover:scale-110 transition-transform`}>
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 group-hover:text-gray-700">
